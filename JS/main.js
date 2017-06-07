@@ -18,8 +18,12 @@ video.addEventListener("timeupdate", () => {
 });
 
 addEventListener("click", (e) => {
-  if(e.target.tagName === "SPAN") {
-    video.currentTime = parseInt(e.target.getAttribute("data-time"));
-    e.target.style.color = "#ff9933";
-  }
+    if(e.target.tagName === "SPAN") {
+      video.currentTime = parseInt(e.target.getAttribute("data-time"));
+      e.target.style.color = "#ff9933";
+
+      for (let i=0; i<span.length; i++) {
+        span[i].style.color = "black"
+      }
+    }
 });
