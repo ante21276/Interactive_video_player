@@ -9,13 +9,13 @@
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.1.2/mediaelement.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.1.2/mediaelement-and-player.min.js"></script>
     <link href="CSS/mediaelementplayer.css" rel="stylesheet">
     <link href="CSS/main.css" rel="stylesheet">
   </head>
   <body>
     <div class="videoWrapper">
-      <video id="myVideo" controls="controls" style="width:100%;height:100%;" >
+      <video id="myVideo" style="width:100%;height:100%;" >
         <source src="video/video.mp4" type="video/mp4">
         <source src="video/video.ogg" type="video/ogg">
       </video>
@@ -23,67 +23,74 @@
 
     <div class="textWrapper">
       <p id="captionParagraph">
-      <span data-time="0">
+      <span data-time=0>
       Now that we've looked at the architecture
       of the internet, let's see how you might</span>
 
-      <span data-time="4">connect your personal devices to
+      <span data-time=4>connect your personal devices to
       the internet inside your house.</span>
 
 
-      <span data-time="7">Well there are many ways to
+      <span data-time=7>Well there are many ways to
       connect to the internet, and</span>
 
 
-      <span data-time="11">most often people connect wirelessly.</span>
+      <span data-time=11>most often people connect wirelessly.</span>
 
 
-      <span data-time="13">Let's look at an example of how
+      <span data-time=13>Let's look at an example of how
       you can connect to the internet.</span>
 
 
-      <span data-time="17">If you live in a city or a town,
+      <span data-time=17>If you live in a city or a town,
       you probably have a coaxial cable for</span>
 
 
-      <span data-time="22">cable Internet, or a phone line if you
+      <span data-time=22>cable Internet, or a phone line if you
       have DSL, running to the outside of</span>
 
 
-      <span data-time="26">your house, that connects you to
+      <span data-time=26>your house, that connects you to
       the Internet Service Provider, or ISP.</span>
 
 
-      <span data-time="32">If you live far out in the country,
+      <span data-time=32>If you live far out in the country,
       you'll more likely have</span>
 
 
-      <span data-time="34">a dish outside your house, connecting
+      <span data-time=34>a dish outside your house, connecting
       you wirelessly to your closest ISP, or</span>
 
 
-      <span data-time="39">you might also use the telephone system.</span>
+      <span data-time=39>you might also use the telephone system.</span>
 
 
-      <span data-time="42">Whether a wire comes straight from
+      <span data-time=42>Whether a wire comes straight from
       the ISP hookup outside your house, or</span>
 
 
-      <span data-time="46">it travels over radio
+      <span data-time=46>it travels over radio
       waves from your roof,</span>
 
 
-      <span data-time="49">the first stop a wire will make once
+      <span data-time=49>the first stop a wire will make once
       inside your house, is at your modem.</span>
 
 
-      <span data-time="53">A modem is what connects the internet
+      <span data-time=53>A modem is what connects the internet
       to your network at home.</span>
 
 
-      <span data-time="57">A few common residential modems are DSL or</span>
+      <span data-time=57>A few common residential modems are DSL or</span>
       </p>
     </div>
+    <script>
+    $('video, audio').mediaelementplayer({
+      features: ['playpause', 'tracks', 'progress', 'fullscreen','volume'],
+      preload: "none",
+      autoplay: false
+    });
+    </script>
     <script src="js/main.js"></script>
   </body>
 </html>

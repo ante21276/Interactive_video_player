@@ -5,9 +5,8 @@ video.addEventListener("timeupdate", () => {
   let current = video.currentTime;
 
   for(let i= 0; i<span.length; i++) {
-
     if (parseInt(span[i].getAttribute("data-time")) === Math.floor(current)) {
-      span[i].style.color = "orange";
+      span[i].style.color = "#ff9933";
       if (span[i].previousElementSibling) {
         span[i].previousElementSibling.style.color = "black";
       }
@@ -21,5 +20,6 @@ video.addEventListener("timeupdate", () => {
 addEventListener("click", (e) => {
   if(e.target.tagName === "SPAN") {
     video.currentTime = parseInt(e.target.getAttribute("data-time"));
+    e.target.style.color = "#ff9933";
   }
 });
